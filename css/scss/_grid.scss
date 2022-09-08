@@ -25,13 +25,81 @@ $s-device: 480px;
         }
     }
 }
+// functions 
+@function grid($col, $offset: false) {
+    $width: calc($col / $columns) * 100 + "%";
+    $result: calc(#{$width} - #{$gutter});
+    @if $offset == offset { 
+        $gutter: calc($gutter / 2); 
+        $result: calc(#{$width} + #{$gutter});
+    }
+    @return $result; 
+}
+// class generator
+@for $i from 1 through $columns {
+    .grid-#{$i}{
+        width: grid($i); 
+    }
+}
+// Mixin grid
+@mixin grid-structure{
+    float: left;
+    min-height: 1px;
+    margin-left: calc($gutter / 2);
+    margin-right: calc($gutter / 2);
 
-p{
-    color: blue;
-    @include d(m) {
-        color: blueviolet;
+    @include d(s) {
+        width: 100%;
+        float: none;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+//selection - seletor "^" started by "string"
+[class^="grid-"] {
+    @include grid-structure();
+}
+// class generator offset
+@for $i from 1 through $columns {
+    .offset-#{$i}{
+        margin-left: grid($i, offset);
+        @extend %offset; 
+    }
+}
+@include d(s) {
+    %offset {
+        margin-left: 0px;
+    }
+}
+//clearfix 
+
+@mixin clearfix {
+    &::after, &::before{ 
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin container {
+    max-width: $l-device;
+    margin: 0 auto;
+    position: relative;
+    @include d(m){
+        max-width: $m-device;
     }
     @include d(s) {
-        color: aqua;
+        max-width: $s-device;
+        padding-left: 10px;
+        padding-right: 10px;
     }
+    @include clearfix;
+}
+.container {
+    @include container;
+}
+.div {
+    background: #040303;
+    min-height: 50px !important;
+    margin-bottom: $gutter;
 }
