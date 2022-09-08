@@ -4,6 +4,7 @@
     <title>John's</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#843">
     <meta name="description" content="John Restaurant" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,32 +17,86 @@
   </head>
   <body>
     <main class="container intro">
-        <div class="grid-5">
-            <img class="logo" src="../assets/lescone.png" alt="Jonh's">
-            <div class="intro-info">
-                <p>Monday. to Sunday. <span class="open"></span>
-                    <br>
-                    from 11:00 am to 12:00 pm
-                </p>
-                <p>Av. Paulista, 1120<br>São Paulo - SP</p>
-            </div>
-            <p class="intro-telefone">+55 (11)95647-0321</p>
+      <div class="grid-5">
+        <img class="logo" src="../assets/lescone.png" alt="Jonh's" />
+        <div class="intro-info">
+          <p>
+            Monday to Sunday<span class="open"></span>
+            <br />
+            11:00 am to 12:00 pm
+          </p>
+          <p>Av. Paulista, 1120<br />São Paulo - SP</p>
         </div>
-        <div class="grid-7">
-            <img src="../assets/foto.png" alt="imagem-lateral Homem servindo café em frente a cafeteira">
-        </div>
+        <p class="intro-telefone">+55 (11)95647-0321</p>
+      </div>
+      <div class="grid-7">
+        <img
+          src="../assets/foto.png"
+          alt="imagem-lateral Homem servindo café em frente a cafeteira"
+        />
+      </div>
     </main>
-    <section>
-        <h1 class="grid-4">Menu</h1>
-        <div class="grid-7 offset-1">
-            <div class="menu-item">
-                <h2>Open Plates</h2>
-                <ul>
-                    <li><span>R$1,70</span>Mixed Eggs</li>
-                    <li><span>R$2,70</span>Fruits Scones</li>
-                </ul>
-            </div>
+    <section class="container">
+      <h1 class="grid-4">Menu</h1>
+      <div class="grid-7 offset-1">
+        <div class="menu-item">
+          <img src="../assets/prato-1.png" alt="First Plate  Appetizer" />
+          <h2>Appetizer</h2>
+          <ul>
+            <li><span>R$1,70</span>Mixed Eggs</li>
+            <li><span>R$2,70</span>Fruits Scones</li>
+            <li><span>R$3,70</span>Cheese Knee</li>
+            <li><span>R$4,70</span>Ramom</li>
+          </ul>
         </div>
+        <div class="menu-item">
+          <img src="../assets/prato-2.png" alt="Second Plate Main menu" />
+          <h2>Main Dishes</h2>
+          <ul>
+            <li><span>R$10,70</span>Penne with Cheese</li>
+            <li><span>R$22,70</span>Brazilian Feijoada</li>
+            <li><span>R$23,70</span>Ribs in Sauce</li>
+            <li><span>R$34,70</span>Chiken Medallion</li>
+            <li><span>R$43,70</span>Chicken Fries</li>
+          </ul>
+        </div>
+      </div>
     </section>
+    <section class="container contact">
+      <h1 class="grid-4 title">Contact</h1>
+      <div class="grid-7 offset-1">
+        <form action="">
+          <label> Name</label>
+          <input type="text" />
+          <div class="row">
+            <div class="grid-7">
+              <label>E-mail</label>
+              <input type="text" />
+            </div>
+            <div class="grid-5">
+              <label>Telefone</label>
+              <input type="text" />
+            </div>
+          </div>
+          <label>Message</label>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <input type="text" />
+        </form>
+        <div class="contact-info">
+            <p>contact@gmail.com</p>
+            <p>+55 (11) 95647-0321</p>
+        </div>
+        <a href="#" class="contact-map">
+            <img src="../assets/map.png" alt="Map pointing to the Restaurant">
+        </a>
+      </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>John's @ 1810 - 2022. All the rights deserve it.</p>
+            <a href="https://github.com/Jhenrique44"></a>
+            <img src="logo" alt="Simbolo o">
+        </div>
+    </footer>
   </body>
 </html>
