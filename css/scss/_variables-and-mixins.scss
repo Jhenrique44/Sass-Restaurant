@@ -9,12 +9,12 @@ $font-1: 'PT Mono', monospace;
 $font-2: 'Aref Ruqaa', serif;
 
 @function em($pixel, $context: 16){
-    @return $pixel / $context + em;
+    @return calc($pixel / $context) + em;
 }
 
 @mixin type-1($size){
     font-family: $font-1;
-    @if size == 18 {
+    @if $size == 18 {
         font-size: em(18);
         line-height: em(30, 18);
     }
@@ -28,4 +28,9 @@ $font-2: 'Aref Ruqaa', serif;
         font-size: em(24);
         line-height: em(30, 24);
     }
+}
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
 }

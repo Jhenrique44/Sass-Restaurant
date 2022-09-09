@@ -1,4 +1,10 @@
+// Geral
 @import 'variables-and-mixins';
 @import 'grid';
 @import 'reset';
 @import 'main';
+
+//Pages
+@import 'intro';
+@import 'menu';
+@import 'contact';
