@@ -19,6 +19,7 @@
         @include type-1(18);
         color: $grey;
         width: 100%;
+        margin-left: -10px;
         padding: 0 5px;
         height: 40px;
         border: 2px solid $bg-hard;
@@ -70,7 +71,7 @@
 }
 .contact-map {
     display: block;
-    @include box-shadow(0 0 0 10px $bg-medium);
+    @include box-shadow(0 0 10px $bg-medium);
     clear: both;
     img {
         width: 100%;
